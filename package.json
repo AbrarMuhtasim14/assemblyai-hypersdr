@@ -1,0 +1,39 @@
+{
+  "name": "assemblyai-hypersdr",
+  "version": "1.0.0",
+  "description": "HyperSDR: Autonomous Outbound Sales Development Voice Agent built and hosted in AssemblyAI Cloud",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "mcp": "node mcp-server/index.js",
+    "aai": "node scripts/aai.js",
+    "test": "node test/verify_pipeline.js",
+    "publish": "node scripts/publish_to_assemblyai.js",
+    "import": "node scripts/import_from_assemblyai.js"
+  },
+  "keywords": [
+    "assemblyai",
+    "voice-agent",
+    "sales-agent",
+    "sdr",
+    "outbound-calling",
+    "hackathon",
+    "lablab-ai"
+  ],
+  "author": "Syed Mohammed Abrar Mohtasim",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^182.0.0",
+    "ws": "^8.18.0",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

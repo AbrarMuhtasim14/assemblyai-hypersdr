@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: hypersdr-voice-sdr
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: HOST
+        value: 0.0.0.0
+      - key: ASSEMBLYAI_API_KEY
+        sync: false
+      - key: ASSEMBLYAI_AGENT_ENDPOINT
+        value: wss://agents.assemblyai.com/v1/ws
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false
+      - key: GOOGLE_SHEET_CSV_URL
+        value: https://docs.google.com/spreadsheets/d/1g7cJF2smRWjYsyOfMkJCFRhKMDgOubrf0XnSgDwZcLE/export?format=csv
+      - key: GOOGLE_SHEET_WEBHOOK_URL
+        sync: false

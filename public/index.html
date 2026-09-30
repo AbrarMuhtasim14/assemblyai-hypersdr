@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HyperSDR — Autonomous Voice SDR • AssemblyAI Voice Agent API</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎙️</text></svg>" />
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <div class="logo-badge">⚡</div>
+      <div>
+        <h1 class="brand-title">HyperSDR</h1>
+        <p class="brand-subtitle">Autonomous Voice SDR • AssemblyAI Voice Agent API • Boutique Hotel Outreach</p>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="nav-tab-btn active" data-tab="dialerTab">
+        <span>📞</span> Live Dialer
+      </button>
+      <button class="nav-tab-btn" data-tab="hubTab">
+        <span>🏨</span> Boutique Hotel Database (<span id="totalLeadsCount">212</span>)
+      </button>
+      <button class="nav-tab-btn" data-tab="crmTab">
+        <span>📊</span> Call Outcomes & CRM
+      </button>
+      <button class="nav-tab-btn" data-tab="settingsTab">
+        <span>⚙️</span> Voice & Telephony
+      </button>
+    </nav>
+
+    <div class="header-status-group">
+      <button class="btn-sync-action secondary" id="headerExportBtn" title="Export updated leads to Excel">
+        <span>📥</span> Export (.xlsx)
+      </button>
+      <a id="gcalHeaderPill" href="/api/auth/google" class="status-pill" style="text-decoration: none; cursor: pointer;" title="Click to Connect Real Google Calendar & Meet">
+        <span style="color: #60a5fa;">📅 Calendar:</span>
+        <span id="gcalStatusText" style="color: #fbbf24;">Connect Google</span>
+      </a>
+      <div class="status-pill">
+        <div class="status-dot" id="wsStatusDot"></div>
+        <span id="wsStatusText">WebSocket: Connecting</span>
+      </div>
+      <div class="status-pill">
+        <span style="color: #38bdf8;">API:</span>
+        <span id="apiKeyPill">AssemblyAI Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SMART TIMING & GOOGLE SHEET SYNC BAR -->
+  <section class="sync-clocks-bar">
+    <div class="clocks-ticker" id="clocksTicker">
+      <span class="ticker-label"><span>🌐</span> US Timezones:</span>
+      <div class="clocks-list" id="clocksList">
+        <!-- Dynamically rendered regional clocks -->
+        <span class="clock-chip">Loading timezones...</span>
+      </div>
+    </div>
+
+    <div class="sheet-sync-controls">
+      <div class="sheet-status-badge" id="sheetStatusBadge">
+        <span class="sheet-dot"></span>
+        <span id="sheetStatusText">Google Sheet Database: Ready (212 Leads)</span>
+      </div>
+      <button class="btn-sync-action" id="syncSheetBtn" title="Sync leads with Google Sheet">
+        <span>🔄</span> Sync Sheet
+      </button>
+      <button class="btn-sync-action secondary" id="openScriptModalBtn" title="Get Apps Script for 2-Way Sync">
+        <span>📋</span> Apps Script Setup
+      </button>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- TAB 1: LIVE DIALER & OUTBOUND CONSOLE -->
+    <section id="dialerTab" class="tab-panel active">
+      <div class="dialer-grid">
+
+        <!-- COLUMN 1: TARGET HOTEL INTELLIGENCE DOSSIER -->
+        <aside class="card-panel">
+          <div class="panel-header">
+            <span class="panel-title"><span>🎯</span> Boutique Hotel Dossier</span>
+            <div style="display: flex; gap: 0.4rem;">
+              <button class="chip-btn" id="openAddLeadBtn" title="Add a custom lead">+ New Lead</button>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <!-- Queue Filter Tabs -->
+            <div class="queue-filter-row">
+              <button class="queue-tab active" data-filter="optimal" id="filterOptimalBtn">
+                🔥 Peak Window (<span id="optimalCountBadge">0</span>)
+              </button>
+              <button class="queue-tab" data-filter="all" id="filterAllBtn">
+                All Hotels (<span id="allCountBadge">212</span>)
+              </button>
+              <button class="btn-autodial" id="autodialBtn" title="Dial highest priority lead in active window">
+                🚀 Autodial Next
+              </button>
+            </div>
+
+            <!-- Prospect Select Dropdown -->
+            <div class="lead-select-wrap">
+              <select id="leadSelect" class="lead-select">
+                <option value="">Loading Qualified Boutique Hotels...</option>
+              </select>
+            </div>
+
+            <!-- Smart Timing & Likelihood Card -->
+            <div class="timing-intelligence-card" id="timingCard">
+              <div class="timing-header">
+                <span class="timing-badge green" id="timingBadge">🔥 Peak Golden Window (94%)</span>
+                <span class="local-clock" id="timingLocalClock">Local: 2:30 PM PST</span>
+              </div>
+              <div class="timing-details">
+                <div class="timing-row">
+                  <span class="timing-label">TCPA Window:</span>
+                  <span class="timing-val" id="timingStatusLabel">Active Business Hours</span>
+                </div>
+                <div class="timing-row">
+                  <span class="timing-label">Next Best Window:</span>
+                  <span class="timing-val" id="timingNextBest">Call Now (Active)</span>
+                </div>
+                <div class="timing-row">
+                  <span class="timing-label">Priority Rank:</span>
+                  <span class="timing-val score" id="timingScore">#1 • Score 125</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hotel Prospect Profile Hero -->
+            <div class="prospect-hero-badge">
+              <div class="prospect-avatar" id="dossierAvatar">J</div>
+              <div style="flex: 1; min-width: 0;">
+                <div class="prospect-name" id="dossierName">Jim Gunther</div>
+                <div class="prospect-title" id="dossierTitle">Proprietor/Innkeeper</div>
+                <div class="prospect-agency" id="dossierAgency">The Inn On First • Napa, California</div>
+                <div id="dossierEmail" style="font-size: 0.72rem; color: #38bdf8; margin-top: 0.2rem; word-break: break-all;">✉️ picturecompile@gmail.com</div>
+              </div>
+            </div>
+
+            <!-- Google Reputation & Standout Feedback (Gold Card) -->
+            <div class="intel-block rating-box" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 0.75rem; margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                <div class="intel-label" style="color: #fbbf24; margin-bottom: 0;">
+                  <span>⭐</span> Google Reputation
+                </div>
+                <span style="font-weight: 800; color: #fbbf24; font-size: 0.85rem;" id="dossierRatingBadge">4.9★ (367 reviews)</span>
+              </div>
+              <p id="dossierReviewSnippet" style="font-style: italic; color: #fde68a; font-size: 0.76rem; line-height: 1.4;">
+                "Jim's culinary breakfasts were unbelievable and he kept a record so we never had the same dish twice."
+              </p>
+            </div>
+
+            <!-- Signature Amenity (Cyan Card) -->
+            <div class="intel-block amenity-box" style="background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.25); border-radius: 8px; padding: 0.75rem; margin-bottom: 0.75rem;">
+              <div class="intel-label" style="color: #38bdf8;">
+                <span>✨</span> Signature Amenity / Guest Experience
+              </div>
+              <p id="dossierAmenity" style="font-size: 0.78rem; color: #bae6fd; line-height: 1.4;">
+                Chef Jim Gunther's scratch-made culinary breakfasts (never repeating a dish) & private whirlpool soaking tubs
+              </p>
+            </div>
+
+            <!-- Operational Bottleneck / Vulnerability (Red Alert) -->
+            <div class="intel-block pain">
+              <div class="intel-label" style="color: #f87171;">
+                <span>⚠️</span> Google 3-Pack Vulnerability & OTA Leakage
+              </div>
+              <p id="dossierPain">A single unaddressed post-stay complaint can drop Google 3-pack placement, while returning guests booking via Expedia/Booking.com leak 18-22% in commissions.</p>
+            </div>
+
+            <!-- Tailored Solution (Emerald Box) -->
+            <div class="intel-block opportunity">
+              <div class="intel-label" style="color: #34d399;">
+                <span>💡</span> Review Concierge & Direct Booking Solution
+              </div>
+              <p id="dossierOpportunity">48-Hour Private Post-Stay Review Routing & Direct Booking Recovery: Issues resolved privately before Google; repeat guests guided to book directly.</p>
+            </div>
+
+            <!-- Tailored Dynamic Voice Opening Hook (Purple Box) -->
+            <div class="intel-block hook">
+              <div class="intel-label" style="color: #c084fc;">
+                <span>🎙️</span> Dynamic Opening Hook (Alex's Spoken Voice)
+              </div>
+              <p id="dossierHook">"Hi Jim, admire what you host at The Inn On First in Napa — traveler feedback noting 'Jim's culinary breakfasts were unbelievable' really stands out..."</p>
+            </div>
+
+            <!-- Estimated OTA Commission Loss & Recovery Target -->
+            <div style="background-color: var(--bg-card); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.78rem; display: flex; justify-content: space-between; margin-top: 0.5rem;">
+              <div>
+                <span style="color: var(--text-dim);">Est. OTA Commission: </span>
+                <strong style="color: #fca5a5;" id="dossierWaste">$255,000/yr</strong>
+              </div>
+              <div>
+                <span style="color: var(--text-dim);">Direct Recovery Target: </span>
+                <strong style="color: #86efac;" id="dossierSavings">~$102,000/yr</strong>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- COLUMN 2: LIVE CALLING STATION -->
+        <main class="card-panel call-station-container">
+          <!-- Status Banner -->
+          <div class="call-status-indicator">
+            <span class="call-state-text" id="callStateLabel">STANDBY • READY TO DIAL</span>
+            <div class="call-timer" id="callTimer">00:00</div>
+          </div>
+
+          <!-- Pulsing Voice Orb & Audio Waveform -->
+          <div class="visualizer-wrapper">
+            <div class="orb-container">
+              <div class="orb-ring-outer"></div>
+              <div class="orb-ring"></div>
+              <div class="orb-core" id="voiceOrb">🎙️</div>
+            </div>
+
+            <!-- Waveform Canvas -->
+            <div class="waveform-container">
+              <canvas id="waveformCanvas"></canvas>
+            </div>
+          </div>
+
+          <!-- Quick Objection Simulator Chips (Hotel Focused) -->
+          <div class="objection-chips-container">
+            <div class="objection-title">Simulate Spoken Innkeeper Response / Objection</div>
+            <div class="chips-row">
+              <button class="chip-btn" data-sim="Who is this and what are you calling about?">"Who is this?"</button>
+              <button class="chip-btn" data-sim="We already have a 4.9 rating on Google Reviews.">"We have 4.9 stars"</button>
+              <button class="chip-btn" data-sim="Expedia and Booking.com bring us most of our guests anyway.">"OTAs bring our guests"</button>
+              <button class="chip-btn" data-sim="We don't want to install complicated new hotel software.">"No new software"</button>
+              <button class="chip-btn" data-sim="Can you send me a quick email with details first?">"Send me an email"</button>
+              <button class="chip-btn" data-sim="Are you an AI voice agent right now?">"Are you an AI?"</button>
+              <button class="chip-btn highlight" data-sim="Sure, let's do Thursday at 2 PM Eastern for 15 minutes.">"Book Thursday 2 PM"</button>
+            </div>
+          </div>
+
+          <!-- Background Ambience & Comfort Noise Bar (LiveKit Style) -->
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 0.5rem 0.85rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.9rem;">🎧</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #7dd3fc;">Line Ambience / Comfort Tone:</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <select id="ambienceSelect" style="background: var(--bg-card); border: 1px solid var(--border-color); color: #e2e8f0; font-size: 0.75rem; padding: 0.3rem 0.6rem; border-radius: 6px;">
+                <option value="office" selected>🏢 Subtle Sales Office (Comfort Noise)</option>
+                <option value="telephone">📞 Vintage Telephone Line Warmth</option>
+                <option value="coffeehouse">☕ Quiet Room Acoustics</option>
+                <option value="off">🔇 Off (Pure Silence)</option>
+              </select>
+              <input type="range" id="ambienceVolumeSlider" min="0" max="0.25" step="0.01" value="0.08" title="Ambience Volume" style="width: 70px; accent-color: #38bdf8;" />
+            </div>
+          </div>
+
+          <!-- Call Action Controls Bar -->
+          <div class="call-controls-bar">
+            <!-- Mute Mic -->
+            <button class="btn-secondary-action" id="muteBtn" title="Mute/Unmute Microphone">
+              <span id="muteIcon">🎙️</span>
+            </button>
+
+            <!-- Main Call Action Button -->
+            <button class="btn-dial" id="startCallBtn">
+              <span>📞</span> Initiate Outbound Call
+            </button>
+            <button class="btn-hangup" id="endCallBtn">
+              <span>🛑</span> End Call & Audit
+            </button>
+
+            <!-- Interactive Google Calendar Demo Button -->
+            <button class="btn-secondary-action" id="openCalendarDemoBtn" title="Open In-Browser Google Calendar Booking Demo" style="background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4); color: #60a5fa;">
+              <span>📅</span> Mimic Calendar
+            </button>
+
+            <!-- Barge-in / Interruption Button -->
+            <button class="btn-secondary-action" id="bargeInBtn" title="Simulate Barge-In / Interruption">
+              <span>✋</span>
+            </button>
+          </div>
+        </main>
+
+        <!-- COLUMN 3: LIVE TRANSCRIPT & REAL-TIME TOOL ENGINE -->
+        <aside class="card-panel">
+          <div class="panel-header">
+            <span class="panel-title"><span>⚡</span> Real-Time Engine & Tools</span>
+            <span class="tech-tag" style="background-color: rgba(6, 182, 212, 0.15); color: #38bdf8;">Universal-3.5 Pro</span>
+          </div>
+
+          <div class="panel-body">
+            <!-- Live Tool Notification Area -->
+            <div id="toolExecutionFeed">
+              <!-- Dynamically populated when SDR triggers tools -->
+            </div>
+
+            <!-- Scrollable Conversation Feed -->
+            <div class="transcript-scroll-area" id="transcriptFeed">
+              <div style="text-align: center; color: var(--text-dim); font-size: 0.8rem; margin: auto;">
+                Select a hotel lead and click <strong>Initiate Outbound Call</strong> to connect Alex (Voice SDR).
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- TAB 2: BOUTIQUE HOTEL LEAD DATABASE & GOOGLE SHEET SYNC -->
+    <section id="hubTab" class="tab-panel">
+      <div class="card-panel" style="padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 800;">Boutique Hotel Lead Database (212 Qualified Properties)</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Connected to Google Sheet as centralized database • Enriched with real-time timezones, call outcomes, and Google Calendar meeting tracking.
+            </p>
+          </div>
+          
+          <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="leadSearchInput" placeholder="Search hotels, owners, cities, amenities..." 
+                   style="background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.6rem 1rem; border-radius: 8px; width: 280px;" />
+            <button class="btn-sync-action" id="hubSyncBtn"><span>🔄</span> Sync Sheet</button>
+            <button class="btn-sync-action secondary" id="exportExcelBtn"><span>📥</span> Export (.xlsx)</button>
+          </div>
+        </div>
+
+        <!-- Google Sheet Database Info Card -->
+        <div class="webhook-info-card" style="margin-bottom: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <div class="webhook-badge">Google Sheet Database Integration</div>
+              <div class="webhook-url" id="webhookUrlDisplay">POST http://localhost:3000/api/leads/webhook</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="chip-btn" id="quickAddMeetingBtn" title="Quickly book demo meeting for selected lead">📅 Quick Book Demo</button>
+            </div>
+          </div>
+          <p class="webhook-desc">Google Sheet acts as your centralized lead database. Newly entered rows are ingested live, and when Alex completes a call or books a meeting on Google Calendar, the outcome and notes write back automatically.</p>
+        </div>
+
+        <!-- Leads Table -->
+        <div class="leads-table-container">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Property & Location</th>
+                <th>Decision Maker</th>
+                <th>Google Rating</th>
+                <th>Local Time</th>
+                <th>Call Status</th>
+                <th>Outcome</th>
+                <th>Meeting Booked?</th>
+                <th>Call Summary & Notes</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="leadsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: POST-CALL CRM & ANALYTICS -->
+    <section id="crmTab" class="tab-panel">
+      <div class="card-panel" style="padding: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 800;">Post-Call CRM Audit Logs & Hotel BANT Records</h2>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.25rem;">
+              Speech Understanding analysis written back to Google Sheet database and Google Calendar.
+            </p>
+          </div>
+          <button class="chip-btn" id="refreshCrmBtn">🔄 Refresh Logs</button>
+        </div>
+
+        <div class="crm-logs-grid" id="crmLogsContainer">
+          <!-- Dynamically populated from /api/crm/logs -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: SETTINGS & TELEPHONY -->
+    <section id="settingsTab" class="tab-panel">
+      <div class="card-panel" style="padding: 1.5rem; max-width: 800px; margin: auto;">
+        <h2 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">AssemblyAI Voice Agent & Telephony Settings</h2>
+
+        <!-- AssemblyAI Voice Selection -->
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1rem; color: #38bdf8; margin-bottom: 0.5rem;">AssemblyAI Neural Voice</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Select the natural voice model for the SDR agent. George is tuned specifically for authoritative, consultative sales conversations.
+          </p>
+          <select id="voiceSelect" class="lead-select" style="max-width: 300px;">
+            <option value="george" selected>George (Authoritative British Male - Recommended for B2B)</option>
+            <option value="alba">Alba (Friendly & Warm US Female)</option>
+            <option value="callum">Callum (Professional Conversational Male)</option>
+            <option value="ivy">Ivy (High Clarity Support Female)</option>
+          </select>
+        </div>
+
+        <!-- Google Calendar Integration Status -->
+        <div style="margin-bottom: 2rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h3 style="font-size: 1rem; color: #60a5fa; margin-bottom: 0;">Google Calendar & Real Google Meet Integration</h3>
+            <span id="gcalStatusBadge" class="timing-badge yellow">OAuth Configured (Ready to Connect)</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Meetings booked during calls automatically insert real events into your Google Calendar and generate authentic Google Meet conference links.
+          </p>
+          <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="gcalHostInput" readonly value="Host: Syed Mohammed Abrar Mohtasim (abrarmuhtasim400@gmail.com)" 
+                   style="flex: 1; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #93c5fd; padding: 0.6rem 1rem; border-radius: 8px; font-size: 0.8rem; min-width: 300px;" />
+            <a href="/api/auth/google" class="btn-sync-action" id="connectGoogleBtn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+              <span>🔗</span> Connect Google Account
+            </a>
+            <button class="btn-sync-action secondary" id="testCalendarModalBtn">
+              <span>📅</span> Preview Calendar Popup
+            </button>
+          </div>
+        </div>
+
+        <!-- Twilio Telephony Outbound Setup -->
+        <div style="margin-bottom: 2rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+          <h3 style="font-size: 1rem; color: #34d399; margin-bottom: 0.5rem;">Twilio SIP Telephony Dispatcher</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Place real outbound phone calls directly to boutique hotel phone numbers via Twilio Elastic SIP connected to AssemblyAI Voice Agent API.
+          </p>
+          
+          <div style="display: flex; gap: 0.75rem; align-items: center; max-width: 450px;">
+            <input type="tel" id="twilioPhoneInput" placeholder="+1 (707) 253-1331" 
+                   style="flex: 1; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.6rem 1rem; border-radius: 8px;" />
+            <button class="btn-dial" id="twilioCallBtn" style="padding: 0.6rem 1.25rem;">
+              <span>📱</span> Dispatch Phone Call
+            </button>
+          </div>
+          <p id="twilioStatusMsg" style="font-size: 0.78rem; margin-top: 0.5rem;"></p>
+        </div>
+
+        <!-- Google Sheet Two-Way Integration Config -->
+        <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+          <h3 style="font-size: 1rem; color: #f59e0b; margin-bottom: 0.5rem;">Google Sheet Live Database Two-Way Sync</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Enter your published Google Sheet CSV URL to dynamically refresh daily boutique hotel leads:
+          </p>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            <input type="url" id="sheetUrlInput" placeholder="https://docs.google.com/spreadsheets/d/.../pub?output=csv"
+                   style="flex: 1; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.6rem 1rem; border-radius: 8px;" />
+            <button class="btn-sync-action" id="saveSheetUrlBtn">Save & Sync</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GOOGLE CALENDAR IN-BROWSER BOOKING MODAL -->
+  <div class="modal-backdrop" id="googleCalendarModal">
+    <div class="modal-card gcal-modal" style="max-width: 600px; border: 1px solid #3b82f6;">
+      <div class="modal-header" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(30, 58, 138, 0.4)); border-bottom: 1px solid rgba(59, 130, 246, 0.3);">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div style="background: #2563eb; color: #fff; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800;">
+            📅
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #ffffff;">Google Calendar • Event Scheduled</h3>
+            <p style="font-size: 0.75rem; color: #93c5fd;">Autonomous SDR booked meeting for Syed Abrar Mohtasim</p>
+          </div>
+        </div>
+        <button class="modal-close" id="closeGcalModalBtn">&times;</button>
+      </div>
+
+      <div class="modal-body" style="padding: 1.25rem;">
+        <!-- Event Title Card -->
+        <div style="margin-bottom: 1rem;">
+          <label style="font-size: 0.72rem; text-transform: uppercase; color: #93c5fd; letter-spacing: 0.05em; font-weight: 700;">Event Title</label>
+          <div id="gcalTitle" style="font-size: 1rem; font-weight: 700; color: #fff; margin-top: 0.25rem; background: var(--bg-card); padding: 0.6rem 0.85rem; border-radius: 6px; border: 1px solid var(--border-color);">
+            15-Min Strategy Sync: Syed Abrar Mohtasim x Jim Gunther - The Inn On First
+          </div>
+        </div>
+
+        <!-- Date & Time Row -->
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem;">
+          <div style="flex: 1;">
+            <label style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Date & Time</label>
+            <div id="gcalDateTime" style="font-size: 0.85rem; font-weight: 600; color: #86efac; margin-top: 0.25rem; background: var(--bg-card); padding: 0.6rem 0.85rem; border-radius: 6px; border: 1px solid var(--border-color);">
+              Thursday, Oct 1 • 2:00 PM – 2:15 PM (PST)
+            </div>
+          </div>
+          <div style="flex: 1;">
+            <label style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Calendar Host</label>
+            <div style="font-size: 0.85rem; color: #fff; margin-top: 0.25rem; background: var(--bg-card); padding: 0.6rem 0.85rem; border-radius: 6px; border: 1px solid var(--border-color);">
+              Syed Mohammed Abrar Mohtasim
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Meet Video Conference Banner -->
+        <div style="background: rgba(37, 99, 235, 0.15); border: 1px solid rgba(59, 130, 246, 0.4); border-radius: 8px; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <span style="font-size: 1.25rem;">📹</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.85rem; color: #60a5fa;">Join with Google Meet</div>
+              <div style="font-size: 0.72rem; color: #93c5fd;" id="gcalMeetLink">meet.google.com/abr-boutique-sync</div>
+            </div>
+          </div>
+          <a id="gcalMeetBtn" href="https://meet.google.com/abr-boutique-sync" target="_blank" class="chip-btn" style="background: #2563eb; color: #fff; text-decoration: none;">
+            Open Meet
+          </a>
+        </div>
+
+        <!-- Attendees -->
+        <div style="margin-bottom: 1rem;">
+          <label style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Guests / Attendees</label>
+          <div style="font-size: 0.8rem; color: #e2e8f0; background: var(--bg-card); padding: 0.6rem 0.85rem; border-radius: 6px; border: 1px solid var(--border-color); margin-top: 0.25rem;">
+            <div style="margin-bottom: 0.25rem;">👤 <strong id="gcalGuestEmail">innkeeper@theinnonfirst.com</strong> (Innkeeper / Decision Maker)</div>
+            <div>👤 <strong>abrarmuhtasim400@gmail.com</strong> (Host / Organizer)</div>
+          </div>
+        </div>
+
+        <!-- Event Agenda / Description -->
+        <div style="margin-bottom: 1.25rem;">
+          <label style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Event Description / Agenda</label>
+          <div id="gcalDescription" style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; background: var(--bg-card); padding: 0.65rem 0.85rem; border-radius: 6px; border: 1px solid var(--border-color); margin-top: 0.25rem;">
+            Discussion: 48-Hour Private Review Routing & Direct Booking Concierge. Strategy to recover 18-22% in OTA commissions (Expedia/Booking.com) and protect Google Maps 3-Pack placement.
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+          <a id="gcalRealLink" href="#" target="_blank" class="btn-sync-action secondary" style="text-decoration: none; padding: 0.6rem 1rem;">
+            <span>📅</span> Add to Real Google Calendar
+          </a>
+          <button class="btn-dial" id="gcalConfirmBtn" style="padding: 0.6rem 1.25rem;">
+            <span>✅</span> Confirm & Save to Database
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POST-CALL INTELLIGENCE MODAL -->
+  <div class="modal-backdrop" id="postCallModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800;">🎙️ Post-Call BANT Audit & Intelligence</h3>
+          <p style="font-size: 0.78rem; color: var(--text-muted);" id="modalSubtitle">Analysis generated by AssemblyAI Speech Understanding</p>
+        </div>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Two-Way Google Sheet Confirmation Banner -->
+        <div class="sheet-synced-banner" id="modalSheetSyncBanner">
+          <span>✅</span> <strong>Two-Way Google Sheet Sync:</strong> Written back to Google Sheet row automatically (Status, Outcome, Summary).
+        </div>
+
+        <!-- Metric Badges Row -->
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-label">BANT Lead Score</div>
+            <div class="metric-value score" id="modalBantScore">85/100</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Call Outcome</div>
+            <div class="metric-value" id="modalDisposition" style="color: #34d399;">Meeting Booked</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Call Duration</div>
+            <div class="metric-value" id="modalDuration">01:45</div>
+          </div>
+        </div>
+
+        <!-- BANT Criteria Breakdown -->
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem;">BANT Qualification Assessment</h4>
+          <div class="bant-grid" id="modalBantBreakdown">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem;">Call Executive Summary</h4>
+          <p id="modalSummary" style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; background-color: var(--bg-card); padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color);"></p>
+        </div>
+
+        <!-- Objections Encountered -->
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem;">Objections & Techniques Used</h4>
+          <div id="modalObjections"></div>
+        </div>
+
+        <!-- Auto-Generated Follow-Up Email -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-dim);">Auto-Drafted Follow-Up Email</h4>
+            <button class="chip-btn" id="copyEmailBtn">Copy Email</button>
+          </div>
+          <textarea id="modalEmailText" readonly rows="4" 
+                    style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; color: #fff; padding: 0.75rem; font-size: 0.78rem; resize: none;"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GOOGLE APPS SCRIPT SETUP MODAL -->
+  <div class="modal-backdrop" id="appsScriptModal">
+    <div class="modal-card" style="max-width: 650px;">
+      <div class="modal-header">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 800;">📋 Google Sheet Database 2-Way Sync Setup</h3>
+          <p style="font-size: 0.78rem; color: var(--text-muted);">Enable live automated updates between Google Sheet and HyperSDR</p>
+        </div>
+        <button class="modal-close" id="closeScriptModalBtn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <ol style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; padding-left: 1.2rem; margin-bottom: 1rem;">
+          <li>In your Google Sheet, click <strong>Extensions $\rightarrow$ Apps Script</strong>.</li>
+          <li>Paste the code snippet below and click <strong>Deploy $\rightarrow$ New Deployment</strong> (Web App, Access: Anyone).</li>
+          <li>Copy your deployment Webhook URL and paste it into `.env` as `GOOGLE_SHEET_WEBHOOK_URL`.</li>
+        </ol>
+
+        <div style="position: relative;">
+          <pre id="appsScriptCode" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; color: #7dd3fc; font-size: 0.72rem; max-height: 250px; overflow-y: auto;"></pre>
+          <button class="chip-btn" id="copyScriptBtn" style="position: absolute; top: 0.75rem; right: 0.75rem;">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD CUSTOM HOTEL LEAD MODAL -->
+  <div class="modal-backdrop" id="addLeadModal">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem; font-weight: 800;">Add Boutique Hotel Lead</h3>
+        <button class="modal-close" id="closeAddLeadModalBtn">&times;</button>
+      </div>
+
+      <form id="addLeadForm" class="modal-body">
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="flex: 1;">
+            <label style="font-size: 0.75rem; color: var(--text-muted);">Property Name *</label>
+            <input type="text" name="propertyName" required placeholder="e.g. Milliken Creek Inn" 
+                   style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;" />
+          </div>
+          <div style="flex: 1;">
+            <label style="font-size: 0.75rem; color: var(--text-muted);">Decision Maker Name *</label>
+            <input type="text" name="decisionMaker" required placeholder="e.g. Rachel Adams" 
+                   style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;" />
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="flex: 1;">
+            <label style="font-size: 0.75rem; color: var(--text-muted);">City & State *</label>
+            <input type="text" name="cityHq" required placeholder="e.g. Napa, CA" 
+                   style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;" />
+          </div>
+          <div style="flex: 1;">
+            <label style="font-size: 0.75rem; color: var(--text-muted);">Recipient Timezone</label>
+            <select name="timezone" style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;">
+              <option value="America/New_York">Eastern (ET)</option>
+              <option value="America/Chicago">Central (CT)</option>
+              <option value="America/Denver">Mountain (MT)</option>
+              <option value="America/Los_Angeles" selected>Pacific (PT)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 0.75rem;">
+          <label style="font-size: 0.75rem; color: var(--text-muted);">Signature Amenity / Guest Experience</label>
+          <input type="text" name="signatureAmenity" placeholder="e.g. Riverside breakfast baskets and wine & cheese hour" 
+                 style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;" />
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-bottom: 1.25rem;">
+          <div style="flex: 1;">
+            <label style="font-size: 0.75rem; color: var(--text-muted);">Direct Email</label>
+            <input type="email" name="email" placeholder="innkeeper@millikencreekinn.com" 
+                   style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;" />
+          </div>
+          <div style="flex: 1;">
+            <label style="font-size: 0.75rem; color: var(--text-muted);">Verified Phone</label>
+            <input type="tel" name="phone" placeholder="+1 (707) 255-1197" 
+                   style="width: 100%; background-color: var(--bg-card); border: 1px solid var(--border-color); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem;" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn-dial" style="width: 100%; justify-content: center;">
+          <span>💾</span> Save Hotel & Add to Queue
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

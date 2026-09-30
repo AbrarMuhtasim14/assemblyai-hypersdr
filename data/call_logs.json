@@ -1,0 +1,715 @@
+[
+  {
+    "callId": "CALL-550476",
+    "leadId": "USA-VIP-0052",
+    "propertyName": "Maplewood Hotel",
+    "agencyName": "Maplewood Hotel",
+    "decisionMaker": "Catherine Simon",
+    "callDurationSeconds": 141,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Sat, Oct 3",
+      "time": "4:00 PM EDT",
+      "slotLabel": "Sat, Oct 3 @ 4:00 PM EDT",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Catherine Simon - Maplewood Hotel",
+      "googleMeetLink": "https://meet.google.com/kby-gonr-bnm",
+      "googleCalendarUrl": "https://www.google.com/calendar/event?eid=bTNqYzQ1ODk5aHY1NWlqNGQ4aWNya2QwN3MgYWJyYXJtdWh0YXNpbTQwMEBt",
+      "bookedAt": "2026-09-30T14:45:13.894Z"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Innkeeper / Manager)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      },
+      {
+        "topic": "Software Overhead Concern",
+        "status": "Handled",
+        "notes": "SDR reassured that the concierge operates via background webhook with zero software for innkeepers to install."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Catherine Simon (Innkeeper / Manager at Maplewood Hotel). Addressed safeguarding Maplewood Hotel's stellar 4.1-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar (Sat, Oct 3 @ 4:00 PM EDT).",
+    "followUpEmail": "Subject: Great speaking earlier, Catherine — note on Maplewood Hotel's Google reviews + direct bookings\n\nHi Catherine,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Maplewood Hotel:\n1. Safeguard your stellar 4.1 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T14:45:50.476Z"
+  },
+  {
+    "callId": "CALL-398125",
+    "leadId": "USA-VIP-0006",
+    "propertyName": "Berry Manor Inn",
+    "agencyName": "Berry Manor Inn",
+    "decisionMaker": "Cheryl Michaelsen",
+    "callDurationSeconds": 12,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thu, Oct 1",
+      "time": "2:00 PM EDT",
+      "slotLabel": "Thu, Oct 1 @ 2:00 PM EDT",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Cheryl Michaelsen - Berry Manor Inn",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Cheryl%20Michaelsen%20(Berry%20Manor%20Inn)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Berry%20Manor%20Inn&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 90,
+    "qualificationScore": 90,
+    "bantBreakdown": {
+      "budget": "20/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Owner/Innkeeper)",
+      "need": "20/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "None Raised",
+        "status": "Smooth Call",
+        "notes": "Innkeeper was receptive to discussion"
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Cheryl Michaelsen (Owner/Innkeeper at Berry Manor Inn). Addressed safeguarding Berry Manor Inn's stellar 4.8-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar (Thu, Oct 1 @ 2:00 PM EDT).",
+    "followUpEmail": "Subject: Great speaking earlier, Cheryl — note on Berry Manor Inn's Google reviews + direct bookings\n\nHi Cheryl,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Berry Manor Inn:\n1. Safeguard your stellar 4.8 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T14:43:18.125Z"
+  },
+  {
+    "callId": "CALL-352332",
+    "leadId": "USA-VIP-0052",
+    "propertyName": "Maplewood Hotel",
+    "agencyName": "Maplewood Hotel",
+    "decisionMaker": "Catherine Simon",
+    "callDurationSeconds": 13,
+    "disposition": "Highly Qualified (Nurture)",
+    "meetingBooked": false,
+    "meetingDetails": null,
+    "totalBantScore": 75,
+    "qualificationScore": 75,
+    "bantBreakdown": {
+      "budget": "20/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Innkeeper / Manager)",
+      "need": "20/25 (Review Protection & Direct Bookings)",
+      "timeline": "10/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "None Raised",
+        "status": "Smooth Call",
+        "notes": "Innkeeper was receptive to discussion"
+      }
+    ],
+    "executiveSummary": "Outbound discussion with Catherine Simon regarding Maplewood Hotel's guest review flow and direct booking strategy in Saugatuck, Michigan. Dispatched 2-minute overview and case study to picturecompile@gmail.com.",
+    "followUpEmail": "Subject: Great speaking earlier, Catherine — note on Maplewood Hotel's Google reviews + direct bookings\n\nHi Catherine,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Maplewood Hotel:\n1. Safeguard your stellar 4.1 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nI've sent our 2-minute boutique hotel breakdown here. If you'd like to explore how this applies to Maplewood Hotel, feel free to grab a quick 15-minute slot on Abrar's calendar: https://calendar.google.com/calendar/render?action=TEMPLATE\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T14:42:32.332Z"
+  },
+  {
+    "callId": "CALL-336397",
+    "leadId": "USA-VIP-0052",
+    "propertyName": "Maplewood Hotel",
+    "agencyName": "Maplewood Hotel",
+    "decisionMaker": "Catherine Simon",
+    "callDurationSeconds": 13,
+    "disposition": "Highly Qualified (Nurture)",
+    "meetingBooked": false,
+    "meetingDetails": null,
+    "totalBantScore": 75,
+    "qualificationScore": 75,
+    "bantBreakdown": {
+      "budget": "20/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Innkeeper / Manager)",
+      "need": "20/25 (Review Protection & Direct Bookings)",
+      "timeline": "10/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "None Raised",
+        "status": "Smooth Call",
+        "notes": "Innkeeper was receptive to discussion"
+      }
+    ],
+    "executiveSummary": "Outbound discussion with Catherine Simon regarding Maplewood Hotel's guest review flow and direct booking strategy in Saugatuck, Michigan. Dispatched 2-minute overview and case study to picturecompile@gmail.com.",
+    "followUpEmail": "Subject: Great speaking earlier, Catherine — note on Maplewood Hotel's Google reviews + direct bookings\n\nHi Catherine,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Maplewood Hotel:\n1. Safeguard your stellar 4.1 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nI've sent our 2-minute boutique hotel breakdown here. If you'd like to explore how this applies to Maplewood Hotel, feel free to grab a quick 15-minute slot on Abrar's calendar: https://calendar.google.com/calendar/render?action=TEMPLATE\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T14:42:16.397Z"
+  },
+  {
+    "callId": "CALL-314404",
+    "leadId": "USA-VIP-0006",
+    "propertyName": "Berry Manor Inn",
+    "agencyName": "Berry Manor Inn",
+    "decisionMaker": "Cheryl Michaelsen",
+    "callDurationSeconds": 172,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Fri, Oct 2",
+      "time": "5:00 PM EDT",
+      "slotLabel": "Fri, Oct 2 @ 5:00 PM EDT",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Cheryl Michaelsen - Berry Manor Inn",
+      "googleMeetLink": "https://meet.google.com/kbw-zdhy-wqu",
+      "googleCalendarUrl": "https://www.google.com/calendar/event?eid=M25pcW9sNGhoNnF1Z3R2Y2JsYjUwMXNucGMgYWJyYXJtdWh0YXNpbTQwMEBt",
+      "bookedAt": "2026-09-30T14:40:50.795Z"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Owner/Innkeeper)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Cheryl Michaelsen (Owner/Innkeeper at Berry Manor Inn). Addressed safeguarding Berry Manor Inn's stellar 4.8-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar (Fri, Oct 2 @ 5:00 PM EDT).",
+    "followUpEmail": "Subject: Great speaking earlier, Cheryl — note on Berry Manor Inn's Google reviews + direct bookings\n\nHi Cheryl,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Berry Manor Inn:\n1. Safeguard your stellar 4.8 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T14:41:54.405Z"
+  },
+  {
+    "callId": "CALL-962258",
+    "leadId": "USA-VIP-0023",
+    "propertyName": "Genesee Country Inn Bed and Breakfast",
+    "agencyName": "Genesee Country Inn Bed and Breakfast",
+    "decisionMaker": "Deborah Stankevich",
+    "callDurationSeconds": 32,
+    "disposition": "Highly Qualified (Nurture)",
+    "meetingBooked": false,
+    "meetingDetails": null,
+    "totalBantScore": 75,
+    "qualificationScore": 75,
+    "bantBreakdown": {
+      "budget": "20/25 (OTA Commission Recovery)",
+      "authority": "25/25 (owner and innkeeper and writer)",
+      "need": "20/25 (Review Protection & Direct Bookings)",
+      "timeline": "10/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "None Raised",
+        "status": "Smooth Call",
+        "notes": "Innkeeper was receptive to discussion"
+      }
+    ],
+    "executiveSummary": "Outbound discussion with Deborah Stankevich regarding Genesee Country Inn Bed and Breakfast's guest review flow and direct booking strategy in Mumford, New York. Dispatched 2-minute overview and case study to picturecompile@gmail.com.",
+    "followUpEmail": "Subject: Great speaking earlier, Deborah — note on Genesee Country Inn Bed and Breakfast's Google reviews + direct bookings\n\nHi Deborah,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Genesee Country Inn Bed and Breakfast:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nI've sent our 2-minute boutique hotel breakdown here. If you'd like to explore how this applies to Genesee Country Inn Bed and Breakfast, feel free to grab a quick 15-minute slot on Abrar's calendar: https://calendar.google.com/calendar/render?action=TEMPLATE\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T14:19:22.274Z"
+  },
+  {
+    "callId": "CALL-019227",
+    "leadId": "USA-VIP-0001",
+    "propertyName": "The Inn On First",
+    "agencyName": "The Inn On First",
+    "decisionMaker": "Jim Gunther",
+    "callDurationSeconds": 144,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "30 seconds",
+      "time": "30 ",
+      "slotLabel": "30 seconds @ 30 ",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Jim Gunther - The Inn On First",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Jim%20Gunther%20(The%20Inn%20On%20First)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20The%20Inn%20On%20First&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Proprietor/Innkeeper)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Jim Gunther (Proprietor/Innkeeper at The Inn On First). Addressed safeguarding The Inn On First's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar (30 seconds @ 30 ).",
+    "followUpEmail": "Subject: Great speaking earlier, Jim — note on The Inn On First's Google reviews + direct bookings\n\nHi Jim,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like The Inn On First:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T08:13:39.227Z"
+  },
+  {
+    "callId": "CALL-137443",
+    "leadId": "USA-VIP-0052",
+    "propertyName": "Maplewood Hotel",
+    "agencyName": "Maplewood Hotel",
+    "decisionMaker": "Catherine Simon",
+    "callDurationSeconds": 145,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Catherine Simon - Maplewood Hotel",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Catherine%20Simon%20(Maplewood%20Hotel)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Maplewood%20Hotel&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Innkeeper / Manager)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Catherine Simon (Innkeeper / Manager at Maplewood Hotel). Addressed safeguarding Maplewood Hotel's stellar 4.1-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Catherine — note on Maplewood Hotel's Google reviews + direct bookings\n\nHi Catherine,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Maplewood Hotel:\n1. Safeguard your stellar 4.1 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T07:58:57.443Z"
+  },
+  {
+    "callId": "CALL-069399",
+    "leadId": "USA-VIP-0034",
+    "propertyName": "By the Side of the Road Inn & Cottages",
+    "agencyName": "By the Side of the Road Inn & Cottages",
+    "decisionMaker": "Anna Bergey",
+    "callDurationSeconds": 130,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Anna Bergey - By the Side of the Road Inn & Cottages",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Anna%20Bergey%20(By%20the%20Side%20of%20the%20Road%20Inn%20%26%20Cottages)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20By%20the%20Side%20of%20the%20Road%20Inn%20%26%20Cottages&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Managing Innkeeper)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      },
+      {
+        "topic": "Software Overhead Concern",
+        "status": "Handled",
+        "notes": "SDR reassured that the concierge operates via background webhook with zero software for innkeepers to install."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Anna Bergey (Managing Innkeeper at By the Side of the Road Inn & Cottages). Addressed safeguarding By the Side of the Road Inn & Cottages's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Anna — note on By the Side of the Road Inn & Cottages's Google reviews + direct bookings\n\nHi Anna,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like By the Side of the Road Inn & Cottages:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T07:41:09.399Z"
+  },
+  {
+    "leadId": "USA-VIP-0001",
+    "agencyName": "The Inn On First",
+    "decisionMaker": "Jim Gunther",
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "callDurationSeconds": 145,
+    "executiveSummary": "Highly productive conversation with Jim Gunther (Proprietor/Innkeeper at The Inn On First). Addressed safeguarding The Inn On First's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "analyzedAt": "2026-09-30T07:14:15.051Z"
+  },
+  {
+    "callId": "CALL-322805",
+    "leadId": "USA-VIP-0048",
+    "propertyName": "Lookout Point Lakeside Inn",
+    "agencyName": "Lookout Point Lakeside Inn",
+    "decisionMaker": "Jennifer Tackett",
+    "callDurationSeconds": 238,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Jennifer Tackett - Lookout Point Lakeside Inn",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Jennifer%20Tackett%20(Lookout%20Point%20Lakeside%20Inn)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Lookout%20Point%20Lakeside%20Inn&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (General Manager / Owner)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      },
+      {
+        "topic": "Software Overhead Concern",
+        "status": "Handled",
+        "notes": "SDR reassured that the concierge operates via background webhook with zero software for innkeepers to install."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Jennifer Tackett (General Manager / Owner at Lookout Point Lakeside Inn). Addressed safeguarding Lookout Point Lakeside Inn's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Jennifer — note on Lookout Point Lakeside Inn's Google reviews + direct bookings\n\nHi Jennifer,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Lookout Point Lakeside Inn:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T07:12:02.805Z"
+  },
+  {
+    "leadId": "USA-VIP-0001",
+    "agencyName": "The Inn On First",
+    "decisionMaker": "Jim Gunther",
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "callDurationSeconds": 145,
+    "executiveSummary": "Highly productive conversation with Jim Gunther (Proprietor/Innkeeper at The Inn On First). Addressed safeguarding The Inn On First's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "analyzedAt": "2026-09-30T06:18:08.502Z"
+  },
+  {
+    "leadId": "USA-VIP-0001",
+    "agencyName": "The Inn On First",
+    "decisionMaker": "Jim Gunther",
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "callDurationSeconds": 145,
+    "executiveSummary": "Highly productive conversation with Jim Gunther (Proprietor/Innkeeper at The Inn On First). Addressed safeguarding The Inn On First's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "analyzedAt": "2026-09-30T06:09:17.196Z"
+  },
+  {
+    "callId": "CALL-358874",
+    "leadId": "USA-VIP-0007",
+    "propertyName": "Rabbit Hill Inn",
+    "agencyName": "Rabbit Hill Inn",
+    "decisionMaker": "Brian Mulcahy",
+    "callDurationSeconds": 171,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Brian Mulcahy - Rabbit Hill Inn",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Brian%20Mulcahy%20(Rabbit%20Hill%20Inn)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Rabbit%20Hill%20Inn&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Owner/Innkeeper)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      },
+      {
+        "topic": "Software Overhead Concern",
+        "status": "Handled",
+        "notes": "SDR reassured that the concierge operates via background webhook with zero software for innkeepers to install."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Brian Mulcahy (Owner/Innkeeper at Rabbit Hill Inn). Addressed safeguarding Rabbit Hill Inn's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Brian — note on Rabbit Hill Inn's Google reviews + direct bookings\n\nHi Brian,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Rabbit Hill Inn:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T06:05:58.874Z"
+  },
+  {
+    "leadId": "USA-VIP-0001",
+    "agencyName": "The Inn On First",
+    "decisionMaker": "Jim Gunther",
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "callDurationSeconds": 145,
+    "executiveSummary": "Highly productive conversation with Jim Gunther (Proprietor/Innkeeper at The Inn On First). Addressed safeguarding The Inn On First's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "analyzedAt": "2026-09-30T05:43:27.199Z"
+  },
+  {
+    "callId": "CALL-690817",
+    "leadId": "USA-VIP-0023",
+    "propertyName": "Genesee Country Inn Bed and Breakfast",
+    "agencyName": "Genesee Country Inn Bed and Breakfast",
+    "decisionMaker": "Deborah Stankevich",
+    "callDurationSeconds": 156,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Deborah Stankevich - Genesee Country Inn Bed and Breakfast",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Deborah%20Stankevich%20(Genesee%20Country%20Inn%20Bed%20and%20Breakfast)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Genesee%20Country%20Inn%20Bed%20and%20Breakfast&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (owner and innkeeper and writer)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Deborah Stankevich (owner and innkeeper and writer at Genesee Country Inn Bed and Breakfast). Addressed safeguarding Genesee Country Inn Bed and Breakfast's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Deborah — note on Genesee Country Inn Bed and Breakfast's Google reviews + direct bookings\n\nHi Deborah,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Genesee Country Inn Bed and Breakfast:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-30T05:38:10.817Z"
+  },
+  {
+    "callId": "CALL-831444",
+    "leadId": "USA-VIP-0006",
+    "propertyName": "Berry Manor Inn",
+    "agencyName": "Berry Manor Inn",
+    "decisionMaker": "Cheryl Michaelsen",
+    "callDurationSeconds": 156,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Cheryl Michaelsen - Berry Manor Inn",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Cheryl%20Michaelsen%20(Berry%20Manor%20Inn)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Berry%20Manor%20Inn&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Owner/Innkeeper)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      },
+      {
+        "topic": "Software Overhead Concern",
+        "status": "Handled",
+        "notes": "SDR reassured that the concierge operates via background webhook with zero software for innkeepers to install."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Cheryl Michaelsen (Owner/Innkeeper at Berry Manor Inn). Addressed safeguarding Berry Manor Inn's stellar 4.8-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Cheryl — note on Berry Manor Inn's Google reviews + direct bookings\n\nHi Cheryl,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Berry Manor Inn:\n1. Safeguard your stellar 4.8 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to picturecompile@gmail.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-28T21:10:31.444Z"
+  },
+  {
+    "leadId": "USA-VIP-0001",
+    "agencyName": "The Inn On First",
+    "decisionMaker": "Jim Gunther",
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "callDurationSeconds": 145,
+    "executiveSummary": "Highly productive conversation with Jim Gunther (Proprietor/Innkeeper at The Inn On First). Addressed safeguarding The Inn On First's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "analyzedAt": "2026-09-28T20:30:44.388Z"
+  },
+  {
+    "callId": "CALL-921818",
+    "leadId": "USA-VIP-0007",
+    "propertyName": "Rabbit Hill Inn",
+    "agencyName": "Rabbit Hill Inn",
+    "decisionMaker": "Brian Mulcahy",
+    "callDurationSeconds": 209,
+    "disposition": "Meeting Booked (Hot Lead)",
+    "meetingBooked": true,
+    "meetingDetails": {
+      "day": "Thursday",
+      "time": "2:00 PM EST",
+      "title": "15-Min Strategy Sync: Syed Abrar Mohtasim x Brian Mulcahy - Rabbit Hill Inn",
+      "googleMeetLink": "https://meet.google.com/abr-boutique-sync",
+      "googleCalendarUrl": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=15-Min%20Strategy%20Sync%3A%20Syed%20Abrar%20Mohtasim%20x%20Brian%20Mulcahy%20(Rabbit%20Hill%20Inn)&details=Review%20Concierge%20%26%20Direct%20Booking%20Discussion%20for%20Rabbit%20Hill%20Inn&location=https%3A%2F%2Fmeet.google.com%2Fabr-boutique-sync"
+    },
+    "totalBantScore": 100,
+    "qualificationScore": 100,
+    "bantBreakdown": {
+      "budget": "25/25 (OTA Commission Recovery)",
+      "authority": "25/25 (Owner/Innkeeper)",
+      "need": "25/25 (Review Protection & Direct Bookings)",
+      "timeline": "25/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Google 3-Pack Reputation",
+        "status": "Handled",
+        "notes": "SDR explained private 48-hour post-checkout review routing preventing public negative reviews."
+      },
+      {
+        "topic": "OTA Commission Leakage (18-22%)",
+        "status": "Handled",
+        "notes": "SDR presented direct-booking re-engagement strategy to shift return guests to direct hotel booking."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent built on AssemblyAI Voice Agent API."
+      }
+    ],
+    "executiveSummary": "Highly productive conversation with Brian Mulcahy (Owner/Innkeeper at Rabbit Hill Inn). Addressed safeguarding Rabbit Hill Inn's stellar 4.9-star Google score and recovering 18-22% in OTA commissions. Innkeeper scheduled a 15-minute strategy sync with Syed Abrar Mohtasim on Google Calendar.",
+    "followUpEmail": "Subject: Great speaking earlier, Brian — note on Rabbit Hill Inn's Google reviews + direct bookings\n\nHi Brian,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Syed Abrar Mohtasim's boutique review concierge helps independent properties like Rabbit Hill Inn:\n1. Safeguard your stellar 4.9 Google rating: Reaching guests privately 48 hours post-checkout so friction is resolved before reaching Google Maps.\n2. Recover 18% to 22% in OTA commissions: Re-engaging past guests to book directly on your website for their return visits.\n3. Zero software overhead: Runs quietly in the background without burdening your front-desk staff.\n\nLooking forward to our quick strategy sync! We've sent a Google Calendar invite to brian@rabbithillinn.com with the Google Meet link.\n\nBest regards,\n\nAlex (on behalf of Syed Mohammed Abrar Mohtasim)\nBoutique Review Concierge & Direct Booking Systems\nEmail: abrarmuhtasim400@gmail.com | Phone: +1 707-253-1331",
+    "analyzedAt": "2026-09-28T19:48:41.818Z"
+  },
+  {
+    "callId": "CALL-140760",
+    "leadId": "AGY-002",
+    "agencyName": "Just Digital Inc.",
+    "decisionMaker": "Hugo Fernandez",
+    "callDurationSeconds": 56,
+    "disposition": "Highly Qualified (Nurture)",
+    "totalBantScore": 80,
+    "bantBreakdown": {
+      "budget": "20/25",
+      "authority": "25/25 (Founder & CEO)",
+      "need": "25/25 (Local service clients frequently miss in...)",
+      "timeline": "10/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "Current Tooling (Zapier/Make)",
+        "status": "Handled",
+        "notes": "Lead uses Zapier; SDR highlighted task limits and voice capabilities of n8n & AssemblyAI."
+      },
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent, turning it into live product proof."
+      }
+    ],
+    "executiveSummary": "Outbound connection made with Hugo Fernandez at Just Digital Inc.. Introduced Abrar's custom AssemblyAI and n8n workflow systems addressing Local service clients frequently miss incoming phone leads during peak hours, resulting in low conversion rates despite high ad spend.. Case study and technical overview dispatched to hugo@justdigitalinc.com for review.",
+    "followUpEmail": "Subject: Great speaking earlier, Hugo — 15-min sync notes + case study\n\nHi Hugo,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Abrar's automation studio specializes in building turnkey n8n automation pipelines and low-latency voice AI agents designed specifically for agencies in Local Business Growth & Boutique GHL CRM Deployments.\n\nHere is a quick recap of what we covered:\n• Tackling the Local service clients frequently miss incoming phone leads during peak hours, resulting in low conversion rates despite high ad spend. to recover ~35 hours weekly for your team.\n• Direct integration into your core stack (Google Workspace, Slack, Stripe, GoHighLevel).\n• White-label partnership model where we deliver complex builds turnkey within 72 hours.\n\nI've attached our 60-second agency case study here. If you'd like to explore how this applies to Just Digital Inc., feel free to grab 15 minutes on Abrar's calendar: https://cal.com/abrar/15min\n\nBest regards,\n\nAlex (on behalf of Syed Abrar Mohtasim)\nAbrar AI Automation Systems\nWhatsApp: +880 1852-570002 | Email: abrarmuhtasim400@gmail.com",
+    "analyzedAt": "2026-09-24T21:25:40.760Z"
+  },
+  {
+    "callId": "CALL-796642",
+    "leadId": "AGY-002",
+    "agencyName": "Just Digital Inc.",
+    "decisionMaker": "Hugo Fernandez",
+    "callDurationSeconds": 16,
+    "disposition": "Highly Qualified (Nurture)",
+    "totalBantScore": 70,
+    "bantBreakdown": {
+      "budget": "15/25",
+      "authority": "25/25 (Founder & CEO)",
+      "need": "20/25 (Local service clients frequently miss in...)",
+      "timeline": "10/25"
+    },
+    "objectionsAudited": [
+      {
+        "topic": "AI Identity Verification",
+        "status": "Acknowledged Positively",
+        "notes": "SDR transparently confirmed being an autonomous voice agent, turning it into live product proof."
+      }
+    ],
+    "executiveSummary": "Outbound connection made with Hugo Fernandez at Just Digital Inc.. Introduced Abrar's custom AssemblyAI and n8n workflow systems addressing Local service clients frequently miss incoming phone leads during peak hours, resulting in low conversion rates despite high ad spend.. Case study and technical overview dispatched to hugo@justdigitalinc.com for review.",
+    "followUpEmail": "Subject: Great speaking earlier, Hugo — 15-min sync notes + case study\n\nHi Hugo,\n\nGreat connecting briefly over the phone earlier today!\n\nAs mentioned, Abrar's automation studio specializes in building turnkey n8n automation pipelines and low-latency voice AI agents designed specifically for agencies in Local Business Growth & Boutique GHL CRM Deployments.\n\nHere is a quick recap of what we covered:\n• Tackling the Local service clients frequently miss incoming phone leads during peak hours, resulting in low conversion rates despite high ad spend. to recover ~35 hours weekly for your team.\n• Direct integration into your core stack (Google Workspace, Slack, Stripe, GoHighLevel).\n• White-label partnership model where we deliver complex builds turnkey within 72 hours.\n\nI've attached our 60-second agency case study here. If you'd like to explore how this applies to Just Digital Inc., feel free to grab 15 minutes on Abrar's calendar: https://cal.com/abrar/15min\n\nBest regards,\n\nAlex (on behalf of Syed Abrar Mohtasim)\nAbrar AI Automation Systems\nWhatsApp: +880 1852-570002 | Email: abrarmuhtasim400@gmail.com",
+    "analyzedAt": "2026-09-24T21:03:16.642Z"
+  }
+]
